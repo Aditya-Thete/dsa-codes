@@ -111,21 +111,3 @@ int main()
     return 0;
 }
 
-
-
- 
-Enter # as a deliminator after expression(At the end)
-
-Enter Expression: {(a+b)*[c/d]}
-1
-Expression is Well Parenthesized.
-DO you want to continue?{1/0) 0
-
-Enter # as a deliminator after expression(At the end)
-
-Enter Expression: {(a+b)*[c/d]}
-{
-1
-
-Not parenthesized At 14 = {
-DO you want to continue?{1/0) 0
