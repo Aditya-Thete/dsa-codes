@@ -29,12 +29,12 @@ def Binary_search():
   
 def SelectionSort(): 
      
-    for i in range(0,len(student_list)-1):          # Outer for loop is used larger iterations of 
-indexes 
+    for i in range(0,len(student_list)-1): 
+        # Outer for loop is used larger iterations of indexes 
         minIndex = i  
      
-        for j in range(i+1 ,len(student_list) ):    # Inner for loop is used for comparison in each 
-larger iteration 
+        for j in range(i+1 ,len(student_list) ):   
+            # Inner for loop is used for comparison in each larger iteration 
             if(student_list[j] < student_list[minIndex]):     
                 minIndex = j 
      
@@ -98,8 +98,7 @@ for i in range(n):
 print(student_list) 
     
 while(1): 
-    search=print(" 1.linear search\n 2.Binary search \n 3.Fibonacci Search \n 4.Sentinel 
-Search \n 0.Exit") 
+    search=print(" 1.linear search\n 2.Binary search \n 3.Fibonacci Search \n 4.Sentinel Search \n 0.Exit") 
     option=int(input("Enter your Choice:")) 
     if(option==1): 
         key=int(input("Enter the Roll No. you want to search:")) 
