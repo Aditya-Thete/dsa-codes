@@ -2,16 +2,18 @@ C=[]
 n=int(input("Enter the no. of students in class:")) 
 print("Enter the Students in class and press enter:") 
 for i in range(n): 
-data=input() 
-C.append(data) 
+    data=input() 
+    C.append(data) 
 print("Students in whole class:",C) 
+
 ##############Students who play cricket **************** 
 A=[] 
 n1=int(input("Enter the No. of students who play Cricket: ")) 
 print("Enter the Students Name who play Cricket:") 
 for i in range(n1): 
-data=input() 
-A.append(data) 
+    data=input() 
+    A.append(data) 
+    
 j=[x for x in A if(x in C)] 
 print("Students who play cricket from class:",j) 
 #****************#Students who play badminton******************** 
@@ -19,12 +21,12 @@ B=[]
 n2=int(input("Enter the no. of students who play badminton")) 
 print("Enter the students name who play Badminton") 
 for i in range(n2): 
-data=input() 
-B.append(data) 
+    data=input() 
+    B.append(data) 
+
 f=[x for x in B if(x in C)] 
 print("Students who play badminton from class:",f) 
-#############Students who play either Cricket or badminton but not 
-both##########################3 
+#############Students who play either Cricket or badminton but not both##########################3 
 c=[x for x in f if(x not in j)] 
 d=[x for x in j if(x not in f)] 
 cd=c+d 
@@ -44,49 +46,12 @@ print("Students who play only Badminton:",m)
 ###############No. of students who play neither cricket nor badminton############ 
 y=[] 
 for i in C: 
-if i not in j: 
-y.append(i) 
+    if i not in j: 
+        y.append(i) 
 y_=[] 
 for j in C: 
-if j not in f: 
+    if j not in f: 
         y_.append(j) 
     a=[x for x in y if x in y_] 
 print ("No. of students who play neither cricket nor badminton:",len(a)) 
 print() 
-  
-                                                OUTPUT 
- [?2004l 
-Enter the no. of students in class:8 
-Enter the Students in class and press enter: 
-arthur      Ha  arthur  
-niko 
-yommy     tommy  
-carl 
-trevor 
-franklin 
-michael 
-dutch 
-Students in whole class: ['arthur ', 'niko', 'tommy ', 'carl', 'trevor', 'franklin', 'michael', 
-'dutch'] 
-Enter the No. of students who play Cricket: 6 
-Enter the Students Name who play Cricket: 
-arthur  
-dutch 
-trevor 
-carl 
-tommy 
-franklin 
-Students who play cricket from class: ['arthur ', 'dutch', 'trevor', 'carl', 'franklin'] 
-Enter the no. of students who play badminton4 
-Enter the students name who play Badminton 
-michael  
-tommy  
-franklin 
-carl 
-Students who play badminton from class: ['tommy ', 'franklin', 'carl'] 
-Students who play either cricket nor badminton but not both: ['tommy ', 'arthur ', 'dutch', 
-'trevor'] 
-Students who play both cricket and badminton ['franklin', 'carl'] 
-Students who play only Cricket: ['arthur ', 'dutch', 'trevor'] 
-Students who play only Badminton: ['tommy '] 
-No. of students who play neither cricket nor badminton: 2 
