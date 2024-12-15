@@ -119,21 +119,3 @@ int main() {
 
     return 0;
 }
-
-  
-
-
-Output
-Enter total number of students: 5
-Enter number of students who like vanilla: 3
-Enter the roll numbers of students who like vanilla: 1 2 3
-Enter number of students who like butterscotch: 3
-Enter the roll numbers of students who like butterscotch: 3 4 5
-
-Vanilla set: 3 2 1 
-Butterscotch set: 5 4 3 
-
-Set of students who like both vanilla and butterscotch: 3 
-Set of students who like either vanilla or butterscotch but not both: 2 1 4 5 
-Set of students who like neither vanilla nor butterscotch: 
-Number of students who like neither vanilla nor butterscotch: 0
