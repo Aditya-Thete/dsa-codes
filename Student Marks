@@ -8,8 +8,7 @@ marks_scored=[]
 absent_student=[] 
 total=0 
 for i in S: 
-    marks=eval(input("Marks scored by student  "+ i +  " in FDS test is:(put marks -1 for 
-Absent students):")) 
+    marks=eval(input("Marks scored by student  "+ i + " in FDS test is:(put marks -1 for Absent students):")) 
     if marks==-1: 
         absent_student.append(i) 
     else: 
@@ -47,8 +46,7 @@ def freq():
     print("\nScore",mark,"is with highest frequency",max) 
   
 while(1): 
-    print("\nEnter\n1.Average\n2.High score\n3.Lowest Score\n4.Higest Frequency\n5.No. 
-of Absent Students\n6Name of the Absent students") 
+    print("\nEnter\n1.Average\n2.High score\n3.Lowest Score\n4.Higest Frequency\n5.No. of Absent Students\n6Name of the Absent students") 
     o=input() 
     if o=='1': 
         avg() 
