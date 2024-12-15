@@ -43,24 +43,7 @@ print("Sorted Scores:",Score_list)
 print("Top Five scores:") 
 top_five(Score_list) 
                            
-                                                          OUTPUT 
- 
-Enter the no. of students present in the class:5 
-Enter the scores:(in float point) 
-96.90 
-78.56 
-85.89 
-83.48 
-96.03 
-Unsorted Score: [96.9, 78.56, 85.89, 83.48, 96.03] 
-Sorted Scores: [78.56, 83.48, 85.89, 96.03, 96.9] 
-Top Five scores: 
-96.9 
-96.03 
-85.89 
-83.48 
-78.56 
- 
+                                                          
  
  
  
