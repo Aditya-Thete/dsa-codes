@@ -1,0 +1,79 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Graph {
+    int V;
+    vector<vector<int>> adj;
+    bool directed;
+
+public:
+    Graph(int vertices, bool isDirected) {
+        V = vertices;
+        directed = isDirected;
+        adj.resize(V, vector<int>(V, 0));
+    }
+
+    void addEdge(int u, int v) {
+        if (u < 0 || v < 0 || u >= V || v >= V) {
+            cout << "Invalid vertices!\n";
+            return;
+        }
+
+        adj[u][v] = 1;
+        if (!directed)
+            adj[v][u] = 1;
+    }
+
+    void display() {
+        cout << "\nAdjacency Matrix:\n";
+        for (int i = 0; i < V; ++i) {
+            for (int j = 0; j < V; ++j)
+                cout << adj[i][j] << " ";
+            cout << endl;
+        }
+    }
+};
+
+int main() {
+    int vertices, choice, u, v;
+    bool directed;
+    
+    cout << "Enter number of vertices: ";
+    cin >> vertices;
+
+    cout << "Is the graph directed? (1 for Yes, 0 for No): ";
+    cin >> directed;
+
+    Graph g(vertices, directed);
+
+    while (true) {
+        cout << "\n----- Menu -----\n";
+        cout << "1. Add Edge\n";
+        cout << "2. Display Adjacency Matrix\n";
+        cout << "3. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter edge (u v): ";
+                cin >> u >> v;
+                g.addEdge(u, v);
+                break;
+
+            case 2:
+                g.display();
+                break;
+
+            case 3:
+                cout << "Exiting...\n";
+                return 0;
+
+            default:
+                cout << "Invalid choice!\n";
+        }
+    }
+
+    return 0;
+}
